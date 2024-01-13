@@ -15,10 +15,10 @@ hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
 # load image
 image = cv2.imread('pracownicy.jpg')
-image = cv2.resize(image, (700, 400))
+image = cv2.resize(image, (600, 450))
 
 # detect people in the image
-(rects, weights) = hog.detectMultiScale(image, winStride=(4, 4), padding=(8, 8), scale=1.05)
+(rects, weights) = hog.detectMultiScale(image, winStride=(4, 4), padding=(8, 8), scale=1.07)
 
 # draw the bounding boxes
 for (x, y, w, h) in rects:
