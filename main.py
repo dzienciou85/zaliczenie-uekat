@@ -11,7 +11,6 @@ print(type(img))
 print(img.shape)
 
 
-
 # initialize the HOG descriptor/person detector
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
@@ -34,4 +33,3 @@ api.add_resource(PeopleCount, '/')
 
 if __name__ == '__main__':
     app.run(debug=False)
-
