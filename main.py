@@ -30,6 +30,7 @@ class PeopleCountStatic(Resource):
         (rects, weights) = hog.detectMultiScale(image, winStride=(1, 1), padding=(7, 7), scale=1.04)
         return {'People on image': len(rects)}
 
+
 class PeopleDynamicUrl(Resource):
     def get(self):
         url = request.args.get('url')
@@ -44,6 +45,7 @@ class PeopleDynamicUrl(Resource):
         (rects2, weights) = hog.detectMultiScale(img, winStride=(4, 4), padding=(10, 10), scale=1.1)
         return {'People found in URL:': len(rects2)}
         pass
+
 
 api.add_resource(PeopleCountStatic, '/')
 api.add_resource(PeopleDynamicUrl, '/dynamic')
