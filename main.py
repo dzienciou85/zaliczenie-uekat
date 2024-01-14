@@ -1,9 +1,9 @@
-#import OpenCV
+# import OpenCV
 import cv2
-#import Flask and Flas restful modules
+# import Flask and Flas restful modules
 from flask import Flask
 from flask_restful import Resource, Api
-#Read the image and checking its type
+# Read the image and checking its type
 img = cv2.imread('pobrane.jpg')
 img = cv2.resize(img, (600, 450))
 
